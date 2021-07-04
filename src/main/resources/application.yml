@@ -1,0 +1,19 @@
+server:
+  port: 8180
+  servlet:
+    context-path: /kafka-demo
+
+spring:
+  application:
+    name: kafka-demo
+  kafka:
+    producer:
+      bootstrap-server: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    consumer:
+      bootstrap-srver: localhost:9092
+      group-id: group-id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
